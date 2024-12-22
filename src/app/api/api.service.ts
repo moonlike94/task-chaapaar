@@ -11,6 +11,7 @@ export class ApiService {
 
   private apiUrl = 'https://thingproxy.freeboard.io/fetch/https://accounts.mail.ir/app/sign-up';
   
+  // private apiUrl = 'https://accounts.mail.ir/app/sign-up';
 
   constructor(private http: HttpClient) {}
 
