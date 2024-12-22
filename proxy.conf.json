@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://accounts.mail.ir",
+      "secure": false
+    }
+  }
+  
