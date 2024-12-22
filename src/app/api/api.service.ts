@@ -10,6 +10,7 @@ import { map, Observable } from 'rxjs';
 export class ApiService {
 
   private apiUrl = 'https://thingproxy.freeboard.io/fetch/https://accounts.mail.ir/app/sign-up';
+  
 
   constructor(private http: HttpClient) {}
 

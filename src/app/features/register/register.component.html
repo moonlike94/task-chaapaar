@@ -10,7 +10,7 @@
               <mat-form-field>
                 <mat-label>{{ field.title }} :</mat-label>
                 <input [formControlName]="field.name" [type]="field.name === 'newPassword' ? 'password' : 'text'"
-                  [placeholder]="field.description" matInput>
+                  [matTooltip]="field.description" matInput matTooltipPosition="left" >
                 <ng-container *ngIf="dynamicForm.get(field.name)?.errors && dynamicForm.get(field.name)?.touched">
                   <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('required')"> {{field.errorMessage || 'This field is required.' }} </mat-hint>
                   <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('minlength')"> Minimum {{ field.minLength }}
