@@ -26,39 +26,3 @@
     </mat-card>
   </div>
 </div>
-
-<!-- <div class="card" *ngIf="formSchema">
-  <h2>{{ formSchema.title }}</h2>
-  <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
-    <div *ngFor="let field of formSchema.fields" class="form-group">
-      <label [for]="field.name">{{ field.title }} : </label>
-      
-      <input
-        *ngIf="field.type === 'TEXT'"
-        [id]="field.name"
-        [formControlName]="field.name"
-        [type]="field.name === 'newPassword' ? 'password' : 'text'"
-        [placeholder]="field.description"
-      />
-
-      <div *ngIf="dynamicForm.get(field.name)?.errors && dynamicForm.get(field.name)?.touched">
-        <small class="text-danger" *ngIf="dynamicForm.get(field.name)?.hasError('required')">
-          {{ field.errorMessage || 'This field is required.' }}
-        </small>
-        <small class="text-danger" *ngIf="dynamicForm.get(field.name)?.hasError('minlength')">
-          Minimum {{ field.minLength }} characters required.
-        </small>
-        <small class="text-danger" *ngIf="dynamicForm.get(field.name)?.hasError('maxlength')">
-          Maximum {{ field.maxLength }} characters allowed.
-        </small>
-        <small class="text-danger" *ngIf="dynamicForm.get(field.name)?.hasError('pattern')">
-          {{ field.errorMessage || 'Invalid format.' }}
-        </small>
-      </div>
-    </div>
-
-    <button type="submit" [disabled]="dynamicForm.invalid">
-      {{ formSchema.submitLabel }}
-    </button>
-  </form>
-</div> -->
