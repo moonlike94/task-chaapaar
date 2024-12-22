@@ -1,0 +1,28 @@
+<div class="back-ground">
+    <div class="auth-com">
+      <mat-card class="stepper-card" *ngIf="formSchema">
+        <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+          <mat-card-content class="card-content">
+            <div class="text-header">
+              اطلاعات کاربری
+            </div>
+            <ng-container *ngFor="let field of formSchema.fields">
+              <mat-form-field>
+                <mat-label>{{ field.title }} :</mat-label>
+                <input [formControlName]="field.name" [type]="field.name === 'newPassword' ? 'password' : 'text'"
+                  [placeholder]="field.description" matInput>
+                <ng-container *ngIf="dynamicForm.get(field.name)?.errors && dynamicForm.get(field.name)?.touched">
+                  <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('required')"> {{field.errorMessage || 'This field is required.' }} </mat-hint>
+                  <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('minlength')"> Minimum {{ field.minLength }}
+                    characters required.</mat-hint>
+                  <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('maxlength')"> Maximum {{ field.maxLength }}
+                    characters allowed.</mat-hint>
+                  <mat-hint *ngIf="dynamicForm.get(field.name)?.hasError('pattern')"> {{ field.errorMessage || 'Invalid format.' }}</mat-hint>
+                </ng-container>
+              </mat-form-field>
+            </ng-container>
+          </mat-card-content>
+        </form>
+      </mat-card>
+    </div>
+  </div>

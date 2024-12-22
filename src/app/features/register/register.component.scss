@@ -1,0 +1,47 @@
+.back-ground{
+    background: black url('/assets/images/back-ground.jpg');
+    height: 100%;
+    overflow: auto;
+  }
+  .text-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: rgba(30,41,59, 1)white;
+  }
+  ::ng-deep .stepper-card {
+    width: 25%;
+    margin: auto;
+    margin-top: 6%;
+    background: #ffffff80  !important;
+    // background-color: rgba(30,41,59, 1) !important;
+    border-radius: 2rem !important;
+  }
+  
+  mat-form-field{
+    width: 100%;
+    direction: rtl;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  input#mat-input-4 {
+    margin-right: 15px;
+  }
+  input#mat-input-5 {
+    margin-right: 15px;
+  }
+  ::ng-deep .mat-tooltip {
+    font-size: 14px;
+    color: #4caf50;
+  }
+  mat-hint{
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    color: red;
+  }
+  .font-button{
+    cursor: pointer;
+    margin: auto;
+  }

@@ -11,11 +11,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './features/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
